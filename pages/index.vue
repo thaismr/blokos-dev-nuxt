@@ -1,9 +1,7 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <MainHero />
+  <div>
+    <MainHero />
+    <ProjectList />
+  </div>
 </template>
-
-<script>
-export default {
-  name: 'IndexPage',
-}
-</script>

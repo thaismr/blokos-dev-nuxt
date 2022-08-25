@@ -9,13 +9,17 @@ a {
     text-decoration: none;
 }
 
-img {
-    width: 100%;
-    height: auto;
+a:hover {
+    text-decoration: underline;
+}
+
+input, button {
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 /*** BASE ***/
 body {
+    font-weight: 400;
     background-color: #f2f2f2;
     font-family: 'Roboto Condensed', sans-serif;
 }
