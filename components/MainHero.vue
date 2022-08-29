@@ -5,7 +5,9 @@
       <p>
         Here you can keep track of some of my main projects and their status.
       </p>
-      <button class="hero-detail">See projects</button>
+      <a href="https://github.com/thaismr" class="hero-detail">
+        See all on GitHub
+      </a>
     </div>
   </section>
 </template>
@@ -20,7 +22,7 @@
   text-align: center;
 }
 
-button.hero-detail {
+a.hero-detail {
   color: #333;
   padding: 1rem 2rem;
   margin: 2rem auto;
@@ -47,5 +49,6 @@ h2 {
 p {
   font-size: 1rem;
   padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
 }
 </style>

@@ -3,9 +3,9 @@
     <h3>{{ content.title }}</h3>
     <div :style="customContainerStyle">
       <figure>
-        <span class="badge">Django</span>
-        <span class="badge">Python</span>
-        <span class="badge">Vanilla JS</span>
+        <span v-for="(item, i) in content.stack" :key="i" class="badge">
+          {{ item }}
+        </span>
       </figure>
     </div>
     <div class="project-item-content">
@@ -35,7 +35,6 @@ export default {
         width: '100%',
         height: '100%',
         'font-size': '0.5rem',
-        'margin-right': '- 200px',
         'background-image': `url(${this.content.image})`,
         'background-repeat': 'no-repeat',
         'background-position': 'center',
@@ -50,8 +49,8 @@ export default {
 <style scoped>
 .project-item-container {
   padding: 0;
+  margin: 0.5rem;
   max-width: 400px;
-  margin: 1rem auto;
   font-size: 0.95rem;
   border-radius: 10px;
   background: #fff;
@@ -62,7 +61,6 @@ export default {
 figure {
   margin: 0;
   height: 0;
-  width: 100%;
   overflow: hidden;
   position: relative;
   padding-bottom: 56.25%;
@@ -74,12 +72,12 @@ figure {
 }
 
 h3 {
+  padding: 2rem 1rem;
   display: block;
-  color: #603acf;
+  margin-bottom: 0;
   font-weight: bold;
   text-align: center;
-  padding: 2rem;
-  margin-bottom: 0;
+  color: #603acf;
   text-transform: uppercase;
   border-bottom: 1px solid #eee;
 }
