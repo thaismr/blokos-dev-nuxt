@@ -1,68 +1,149 @@
-# blokos-dev-nuxt
+# Blokos Dev - Portfolio
 
-## Build Setup
+A modern and responsive portfolio built with **Nuxt 4**, **Vue 3**, and **Tailwind CSS**. This project has been upgraded to Nuxt 4 and is deployed on Azure Static Web Apps with GitHub Actions CI/CD integration.
+
+<https://blokos.dev>
+
+## 🚀 Features
+
+- **Nuxt 4** - Modern Vue fullstack framework
+- **Vue 3** - Progressive JavaScript library
+- **Tailwind CSS** - Utility-first CSS framework
+- **Nuxt UI** - Components with integrated design system
+- **Nuxt Fonts** - Optimized font management
+- **TypeScript** - Static type checking
+- **SSR + Static Generation** - Static pre-rendering
+- **Azure Static Web Apps** - Deployment with GitHub Actions CI/CD
+
+## 📋 Prerequisites
+
+- **Node.js** version 18+
+- **npm** or **yarn**
+
+## 🛠️ Installation
 
 ```bash
-# install dependencies
-$ yarn install
+# Clone the repository
+git clone https://github.com/thaismr/blokos-dev-nuxt.git
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+# Navigate to the directory
+cd blokos-dev-nuxt
 
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
+# Install dependencies
+npm install
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+## 🧑‍💻 Development
 
-## Special Directories
+To start the development server:
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+```bash
+npm run dev
+```
 
-### `assets`
+The application will be available at `http://localhost:3000`
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+## 🏗️ Build
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+### Development
 
-### `components`
+```bash
+npm run build
+npm run preview
+```
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+### Production - Static Generation
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+```bash
+npm run generate
+```
 
-### `layouts`
+## 📁 Project Structure
 
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+```txt
+.
+├── app/
+│ ├── app.vue # Root component
+│ ├── app.config.ts # Application configuration
+│ ├── assets/
+│ │ └── css/
+│ │ └── main.css # Global styles
+│ ├── components/ # Reusable components
+│ │ ├── MainHero.vue
+│ │ ├── ProjectItem.vue
+│ │ └── ProjectList.vue
+│ ├── layouts/
+│ │ └── default.vue # Default layout
+│ └── pages/
+│ └── index.vue # Home page
+├── public/ # Static files
+├── nuxt.config.ts # Nuxt configuration
+├── tsconfig.json # TypeScript configuration
+└── package.json # Project dependencies
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
+```
 
-### `pages`
+## 🎨 Components
 
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
+- **MainHero** - Main hero section of the page
+- **ProjectList** - Portfolio projects list
+- **ProjectItem** - Each project card
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
+### Nuxt Config (`nuxt.config.ts`)
 
-### `plugins`
+- **Preset**: `static` in production, `node-server` in development
+- **Pre-render**: Automatic link crawling for static pre-rendering
 
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
+### Tailwind CSS
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
+The project uses **Tailwind CSS 4** integrated via `@tailwindcss/vite`.
 
-### `static`
+## 📦 Main Dependencies
 
-This directory contains your static files. Each file inside this directory is mapped to `/`.
+```json
+{
+  "nuxt": "^4.3.0",
+  "vue": "^3.5.27",
+  "tailwindcss": "^4.1.18",
+  "@nuxt/ui": "^4.4.0",
+  "@nuxt/fonts": "^0.13.0",
+  "nuxt-gtag": "^4.1.0"
+}
+```
 
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
+## 🌐 Deployment
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
+This project is deployed on **Azure Static Web Apps** with **GitHub Actions** for CI/CD automation. Every push to the repository triggers automatic building and deployment.
 
-### `store`
+### Deployment Process
 
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
+The project is configured for static site generation:
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+```bash
+npm run generate
+```
+
+Available Scripts
+
+| Script             | Description                      |
+| ------------------ | -------------------------------- |
+| `npm run dev`      | Start development server         |
+| `npm run build`    | Build the application            |
+| `npm run generate` | Generate static site             |
+| `npm run preview`  | Preview production build locally |
+
+> Deploys to Azure Static Web Apps
+
+### Useful Links
+
+- [Nuxt Documentation](https://nuxt.com)
+- [Vue 3 Documentation](https://vuejs.org)
+- [Tailwind CSS Documentation](https://tailwindcss.com)
+- [Nuxt UI](https://ui.nuxt.com)
+- [Azure Static Web Apps](https://azure.microsoft.com/en-us/products/app-service/static)
+
+> This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for detail
+
+---
+
+**Status**: ✅ Nuxt 4 - Updated and optimized
