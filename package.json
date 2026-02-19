@@ -13,7 +13,7 @@
   "dependencies": {
     "@nuxt/fonts": "^0.13.0",
     "@nuxt/ui": "^4.4.0",
-    "@tailwindcss/vite": "^4.1.18",
+    "@tailwindcss/vite": "^4.2.0",
     "nuxt": "^4.3.0",
     "nuxt-gtag": "^4.1.0",
     "tailwindcss": "^4.1.18",
